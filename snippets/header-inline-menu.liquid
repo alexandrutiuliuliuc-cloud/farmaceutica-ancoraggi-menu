@@ -1,0 +1,85 @@
+<nav class="header__inline-menu">
+  {%- if section.settings.menu != blank -%}
+    <ul class="list-menu list-menu--inline" role="list">
+      {%- for link in section.settings.menu.links -%}
+        {% liquid
+          assign mega_menu = false
+          assign mega_menu_tabs = false
+          assign mega_menu_only_collection = false
+        %}
+
+        {% for block in section.blocks %}
+          {% liquid
+            assign mega_menu_trigger = block.settings.mega_menu_trigger | handle | strip
+            assign mega_menu_tabs_trigger = block.settings.mega_menu_tabs_trigger | handle | strip
+            assign mega_menu_tabs_only_collection_trigger = block.settings.menu_trigger | handle | strip
+
+            if link.handle == mega_menu_trigger
+              assign mega_menu = true
+              assign mega_menu_tabs = false
+              assign mega_menu_only_collection = false
+              assign shopify_attributes = block.shopify_attributes
+            elsif link.handle == mega_menu_tabs_trigger
+              assign mega_menu_tabs = true
+              assign mega_menu = false
+              assign mega_menu_only_collection = false
+              assign shopify_attributes = block.shopify_attributes
+            elsif link.handle == mega_menu_tabs_only_collection_trigger
+              assign mega_menu_tabs = false
+              assign mega_menu = false
+              assign mega_menu_only_collection = true
+              assign shopify_attributes = block.shopify_attributes
+            endif
+          %}
+        {% endfor %}
+        <li
+          class="list-menu-item {% if mega_menu or mega_menu_tabs or mega_menu_only_collection %}list-menu--megamenu {% elsif link.links != blank %}list-menu--submenu{% endif %}"
+          {{ shopify_attributes }}
+        >
+          {%- liquid
+            assign open_in_new_tab = false
+            if settings.links_blank and link.type == "http_link" and link.url != '#'
+              assign open_in_new_tab = true
+
+              # Keep internal anchors in the same tab (e.g. /#section-id)
+              # Also handle URL-encoded anchors (%23)
+              if link.url contains '#' or link.url contains '%23'
+                assign open_in_new_tab = false
+              elsif link.url contains request.host
+                assign open_in_new_tab = false
+              elsif shop.primary_domain and link.url contains shop.primary_domain.host
+                assign open_in_new_tab = false
+              endif
+            endif
+          -%}
+          <a
+            href="{{ link.url }}"
+            {% if open_in_new_tab %}
+              target="_blank"
+            {% endif %}
+            class="header__menu-item {% if link.current %} header__menu-item--active{% endif %} list-menu__item link focus-inset"
+            {% if link.current %}
+              aria-current="page"
+            {% endif %}
+            aria-label="{{ link.title | escape }}"
+          >
+            <span title="{{ link.title | escape }}">
+              {{ link.title | escape }}
+            </span>
+          </a>
+          {% if mega_menu %}
+            {% render 'mega-menu-columns', link: link, blocks: section.blocks %}
+          {% elsif mega_menu_tabs %}
+            {% render 'mega-menu-tabs', link: link, blocks: section.blocks %}
+          {% elsif mega_menu_only_collection %}
+            {% render 'mega-menu-only-collection', link: link, blocks: section.blocks, from_mobile: false %}
+          {% elsif link.links != blank %}
+            {% render 'submenu', link: link %}
+          {% else %}
+
+          {% endif %}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</nav>

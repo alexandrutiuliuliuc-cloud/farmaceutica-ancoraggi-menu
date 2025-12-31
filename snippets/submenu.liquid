@@ -1,0 +1,111 @@
+<ul
+  class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce color-background-1"
+  role="list"
+>
+  {%- for childlink in link.links -%}
+    <li>
+      {%- if childlink.links == blank -%}
+        {%- liquid
+          assign open_in_new_tab = false
+          if settings.links_blank and childlink.type == "http_link" and childlink.url != "#"
+            assign open_in_new_tab = true
+
+            # Keep internal anchors in the same tab (e.g. /#section-id)
+            # Also handle URL-encoded anchors (%23)
+            if childlink.url contains '#' or childlink.url contains '%23'
+              assign open_in_new_tab = false
+            elsif childlink.url contains request.host
+              assign open_in_new_tab = false
+            elsif shop.primary_domain and childlink.url contains shop.primary_domain.host
+              assign open_in_new_tab = false
+            endif
+          endif
+        -%}
+        <a
+          href="{{ childlink.url }}"
+          {% if open_in_new_tab %}
+            target="_blank"
+          {% endif %}
+          class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} header__menu-item--active{% endif %}"
+          {% if childlink.current %}
+            aria-current="page"
+          {% endif %}
+        >
+          <span>
+            {{ childlink.title | escape }}
+          </span>
+        </a>
+      {%- else -%}
+        {%- liquid
+          assign open_in_new_tab = false
+          if settings.links_blank and childlink.type == "http_link" and childlink.url != "#"
+            assign open_in_new_tab = true
+
+            # Keep internal anchors in the same tab (e.g. /#section-id)
+            # Also handle URL-encoded anchors (%23)
+            if childlink.url contains '#' or childlink.url contains '%23'
+              assign open_in_new_tab = false
+            elsif childlink.url contains request.host
+              assign open_in_new_tab = false
+            elsif shop.primary_domain and childlink.url contains shop.primary_domain.host
+              assign open_in_new_tab = false
+            endif
+          endif
+        -%}
+        <a
+          href="{{ childlink.url }}"
+          {% if open_in_new_tab %}
+            target="_blank"
+          {% endif %}
+          class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} header__menu-item--active{% endif %}"
+          {% if childlink.current %}
+            aria-current="page"
+          {% endif %}
+        >
+          <span>
+            {{ childlink.title | escape }}
+            {% render 'icon-caret' %}
+          </span>
+        </a>
+        <ul
+          class="header__submenu list-menu--disclosure list-menu motion-reduce color-background-1"
+        >
+          {%- for grandchildlink in childlink.links -%}
+            <li>
+              {%- liquid
+                assign open_in_new_tab = false
+                if settings.links_blank and grandchildlink.type == "http_link" and grandchildlink.url != "#"
+                  assign open_in_new_tab = true
+
+                  # Keep internal anchors in the same tab (e.g. /#section-id)
+                  # Also handle URL-encoded anchors (%23)
+                  if grandchildlink.url contains '#' or grandchildlink.url contains '%23'
+                    assign open_in_new_tab = false
+                  elsif grandchildlink.url contains request.host
+                    assign open_in_new_tab = false
+                  elsif shop.primary_domain and grandchildlink.url contains shop.primary_domain.host
+                    assign open_in_new_tab = false
+                  endif
+                endif
+              -%}
+              <a
+                href="{{ grandchildlink.url }}"
+                {% if open_in_new_tab %}
+                  target="_blank"
+                {% endif %}
+                class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} header__menu-item--active{% endif %}"
+                {% if grandchildlink.current %}
+                  aria-current="page"
+                {% endif %}
+              >
+                <span>
+                  {{ grandchildlink.title | escape }}
+                </span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>

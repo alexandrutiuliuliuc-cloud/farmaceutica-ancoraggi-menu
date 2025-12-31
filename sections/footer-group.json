@@ -1,0 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:sections.footer.settings.footer-group.label",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "logo_info",
+          "settings": {
+            "logo": "shopify://shop_images/logo_bianco-1.png",
+            "logo_width": 125,
+            "description": "<strong>Grossista farmaceutico internazionale a supporto delle strutture sanitarie per l’approvvigionamento conforme di farmaci speciali e ospedalieri.</strong>"
+          }
+        },
+        "contacts_4q9iwG": {
+          "type": "contacts",
+          "settings": {
+            "heading": "SU DI NOI",
+            "contact_info": "<p><strong>INDIRIZZO<br/></strong>C.so Guglielmo Marconi n.26 – 28883 GRAVELLONA TOCE (VB)<br/><br/><strong>NUM. TELEFONO<br/></strong>0323 865557<br/><br/><strong>CELLULARE</strong> <br/>339 1367875<br/><br/><strong>E-MAIL</strong><br/>info@finternazionale.it<br/><br/></p>",
+            "default_open": false
+          }
+        },
+        "footer-2": {
+          "type": "link_list",
+          "settings": {
+            "heading": "LINK VELOCI",
+            "menu": "footer",
+            "default_open": false
+          }
+        },
+        "footer-3": {
+          "type": "subscribe",
+          "settings": {
+            "color_scheme_subscribe": "background-1",
+            "enable_box_shadow": true,
+            "heading": "Iscriviti alla nostra mailing list",
+            "text": "Iscriviti alla nostra newsletter per non perderti aggiornamenti e novità dal mondo di Farmaceutica Internazionale Italiana",
+            "additional_text": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "contacts_4q9iwG",
+        "footer-2",
+        "footer-3"
+      ],
+      "settings": {
+        "color_scheme": "scheme-49d5e5a4-1642-422e-9733-e58a90bd2b31",
+        "content_alignment": "left",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_social": true,
+        "enable_copyright_date": true,
+        "enable_copyright_shopname": false,
+        "menu_bottom": "",
+        "show_policy": false,
+        "enable_follow_on_shop": false
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

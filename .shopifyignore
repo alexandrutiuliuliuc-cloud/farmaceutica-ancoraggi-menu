@@ -1,0 +1,16 @@
+# Keep non-theme repository files out of Shopify
+.git/
+.gitignore
+.shopifyignore
+.DS_Store
+README.md
+
+# Shopify CLI local state
+.shopify/
+
+# Common local artifacts
+node_modules/
+.env
+.env.*
+
+

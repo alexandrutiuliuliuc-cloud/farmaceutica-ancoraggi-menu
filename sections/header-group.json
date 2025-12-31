@@ -1,0 +1,216 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.header.settings.header-group.label",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_slide_tDRE6U": {
+          "type": "announcement_slide",
+          "settings": {
+            "color_scheme": "background-3",
+            "text": "Forniture farmaceutiche internazionali certificate GMP, GDP e ISO 9001",
+            "icon": "check-2",
+            "icon_color_scheme": "background-4",
+            "icon_style": "contrast",
+            "icon_fill_type": "gradient"
+          }
+        },
+        "announcement_slide_FbDe3w": {
+          "type": "announcement_slide",
+          "settings": {
+            "color_scheme": "background-3",
+            "text": "Supporto a strutture sanitarie pubbliche e private dal 2008",
+            "icon": "check-2",
+            "icon_color_scheme": "background-4",
+            "icon_style": "contrast",
+            "icon_fill_type": "gradient"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_slide_tDRE6U",
+        "announcement_slide_FbDe3w"
+      ],
+      "settings": {
+        "height": 45,
+        "height_mobile": 40,
+        "color_scheme": "background-3",
+        "text": "",
+        "icon": "none",
+        "icon_color_scheme": "background-3",
+        "icon_style": "colored",
+        "icon_fill_type": "gradient",
+        "enable_slider": true,
+        "rows_count": "1",
+        "rows_count_mobile": "1",
+        "slide_duration": 6,
+        "speed": 1.8,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "e3238936-d23a-44a2-bdd2-be1bd78c266d": {
+          "type": "mega_menu",
+          "settings": {
+            "mega_menu_trigger": "",
+            "column_to_show": 2,
+            "enable_column_1": true,
+            "icon_1": "hand-3",
+            "heading_1": "Column title",
+            "description_1": "Column description",
+            "link_1": "",
+            "menu_1": "",
+            "enable_column_2": true,
+            "icon_2": "laptop-2",
+            "heading_2": "Column title",
+            "description_2": "Column description",
+            "link_2": "",
+            "menu_2": "",
+            "enable_column_3": false,
+            "icon_3": "none",
+            "heading_3": "Column title",
+            "description_3": "Column description",
+            "link_3": "",
+            "menu_3": "",
+            "enable_column_4": false,
+            "icon_4": "none",
+            "heading_4": "Column title",
+            "description_4": "Column description",
+            "link_4": "",
+            "menu_4": "",
+            "enable_column_5": false,
+            "icon_5": "none",
+            "heading_5": "Column title",
+            "description_5": "Column description",
+            "link_5": "",
+            "menu_5": "",
+            "enable_column_6": false,
+            "icon_6": "none",
+            "heading_6": "Column title",
+            "description_6": "Column description",
+            "link_6": "",
+            "menu_6": "",
+            "enable_column_7": false,
+            "icon_7": "none",
+            "heading_7": "Column title",
+            "description_7": "Column description",
+            "link_7": "",
+            "menu_7": "",
+            "enable_column_8": false,
+            "icon_8": "none",
+            "heading_8": "Column title",
+            "description_8": "Column description",
+            "link_8": "",
+            "menu_8": "",
+            "enable_promo": true,
+            "promo_heading": "Promo title",
+            "promo_description": "Promo description",
+            "promo_link_label": "Explore More",
+            "promo_link": "",
+            "promo_button_style": "simple",
+            "icon_color_scheme": "background-1",
+            "icon_style": "colored",
+            "icon_fill_type": "gradient",
+            "icon_size": "recommended",
+            "box_shadow": true
+          }
+        },
+        "88c16652-7f26-43ae-a719-21857c6b2799": {
+          "type": "mega_menu_tabs",
+          "settings": {
+            "mega_menu_tabs_trigger": "",
+            "enable_tab_1": true,
+            "icon_1": "stack",
+            "heading_1": "Tab title",
+            "description_1": "",
+            "menu_1": "",
+            "enable_tab_2": true,
+            "icon_2": "bag-2",
+            "heading_2": "Tab title",
+            "description_2": "",
+            "menu_2": "",
+            "enable_tab_3": true,
+            "icon_3": "pencil",
+            "heading_3": "Tab title",
+            "description_3": "",
+            "menu_3": "",
+            "enable_tab_4": true,
+            "icon_4": "file-1",
+            "heading_4": "Tab title",
+            "description_4": "",
+            "menu_4": "",
+            "enable_tab_5": false,
+            "icon_5": "directions",
+            "heading_5": "Tab title",
+            "description_5": "",
+            "menu_5": "",
+            "enable_tab_6": false,
+            "icon_6": "none",
+            "heading_6": "Tab title",
+            "description_6": "Tab description",
+            "menu_6": "",
+            "enable_promo": false,
+            "promo_heading": "Promo title",
+            "promo_description": "Promo description",
+            "promo_link_label": "View More",
+            "promo_link": "",
+            "promo_button_style": "primary",
+            "icon_color_scheme": "background-1",
+            "icon_style": "colored",
+            "icon_fill_type": "gradient",
+            "icon_size": "recommended",
+            "box_shadow": true
+          }
+        }
+      },
+      "block_order": [
+        "e3238936-d23a-44a2-bdd2-be1bd78c266d",
+        "88c16652-7f26-43ae-a719-21857c6b2799"
+      ],
+      "custom_css": [
+        ".icon-cart {display: none !important; pointer-events: none !important;}",
+        ".cart-count-bubble {display: none !important; pointer-events: none !important;}"
+      ],
+      "settings": {
+        "h1_logo": true,
+        "header_type": "center-logo",
+        "full_width": false,
+        "logo": "shopify://shop_images/logo_pdfantone.png",
+        "logo_width": 100,
+        "enable_logo_mobile": true,
+        "enable_logo_desktop": true,
+        "menu": "main-menu",
+        "enable_country_selector": true,
+        "enable_language_selector": false,
+        "enable_social": false,
+        "sticky_header_type": "on-scroll-up",
+        "enable_search": true,
+        "search_color_scheme": "",
+        "enable_box_shadow": true,
+        "collection_list": [],
+        "product_list": [],
+        "image_ratio": "5/4",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": false
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
